@@ -17,6 +17,8 @@
 		0CCF1221252815CA00675317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF1220252815CA00675317 /* Assets.xcassets */; };
 		0CCF1224252815CA00675317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF1222252815CA00675317 /* LaunchScreen.storyboard */; };
 		0CD0656325281C3400D43DF8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0656225281C3400D43DF8 /* Player.swift */; };
+		0CF0FB50253BD60B003B056F /* ReminderInsertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0FB4F253BD60B003B056F /* ReminderInsertController.swift */; };
+		0CF0FB58253BD7E2003B056F /* TB_Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0FB57253BD7E2003B056F /* TB_Reminder.swift */; };
 		34AF83060346C2E87A5D65BE /* Pods_keepTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258936A6386A0476C3A4D23E /* Pods_keepTime.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		0CCF1223252815CA00675317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CCF1225252815CA00675317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD0656225281C3400D43DF8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0CF0FB4F253BD60B003B056F /* ReminderInsertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderInsertController.swift; sourceTree = "<group>"; };
+		0CF0FB57253BD7E2003B056F /* TB_Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TB_Reminder.swift; sourceTree = "<group>"; };
 		258936A6386A0476C3A4D23E /* Pods_keepTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keepTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4F448BCDC68B38E3D918CB /* Pods-keepTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keepTime.debug.xcconfig"; path = "Target Support Files/Pods-keepTime/Pods-keepTime.debug.xcconfig"; sourceTree = "<group>"; };
 		F723137534E3325BB1426378 /* Pods-keepTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keepTime.release.xcconfig"; path = "Target Support Files/Pods-keepTime/Pods-keepTime.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				0CCF1212252815C800675317 /* AppDelegate.swift */,
 				0CCF1214252815C800675317 /* SceneDelegate.swift */,
 				0CCF1216252815C800675317 /* ReminderViewController.swift */,
+				0CF0FB4F253BD60B003B056F /* ReminderInsertController.swift */,
 				0CCF1218252815C800675317 /* SecondViewController.swift */,
 				0CCF1222252815CA00675317 /* LaunchScreen.storyboard */,
 				0CCF1225252815CA00675317 /* Info.plist */,
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD0656225281C3400D43DF8 /* Player.swift */,
+				0CF0FB57253BD7E2003B056F /* TB_Reminder.swift */,
 			);
 			path = realm;
 			sourceTree = "<group>";
@@ -226,11 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF0FB50253BD60B003B056F /* ReminderInsertController.swift in Sources */,
 				0CCF1219252815C800675317 /* SecondViewController.swift in Sources */,
 				0CCF1217252815C800675317 /* ReminderViewController.swift in Sources */,
 				0C1B028625316CF400ABD399 /* MainTabbarController.swift in Sources */,
 				0CCF1213252815C800675317 /* AppDelegate.swift in Sources */,
 				0CCF1215252815C800675317 /* SceneDelegate.swift in Sources */,
+				0CF0FB58253BD7E2003B056F /* TB_Reminder.swift in Sources */,
 				0CD0656325281C3400D43DF8 /* Player.swift in Sources */,
 				0CCF121F252815C800675317 /* keepTime.xcdatamodeld in Sources */,
 			);
