@@ -7,33 +7,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC692114-096F-4CB8-B962-E4AE2C5CCB9C"
-            shouldBeEnabled = "Yes"
+            uuid = "545DC12F-9448-4F1E-9FBF-DF4479737D57"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keepTime/ReminderInsertController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "initDetailView(seq:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "showDetail(rData:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "545DC12F-9448-4F1E-9FBF-DF4479737D57"
+            uuid = "FEF90FA7-0B1C-4C35-B278-3EEC4F3EFEBF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keepTime/ReminderInsertController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "showDetail(rData:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "insertOrUpdateReminder(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD172705-7215-4D21-91B5-FE313378BCB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "keepTime/ReminderInsertController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "insertOrUpdateReminder(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "keepTime/ReminderInsertController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "insertOrUpdateReminder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56 - 9e22b85afe68b6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
+                  moduleName = "keepTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56 - 6b9f03893c079bf3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
+                  moduleName = "keepTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

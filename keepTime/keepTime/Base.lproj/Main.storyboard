@@ -252,7 +252,7 @@
                                         </constraints>
                                         <state key="normal" title="저장"/>
                                         <connections>
-                                            <action selector="insertReminder:" destination="KAS-qN-HTc" eventType="touchUpInside" id="NLr-65-hru"/>
+                                            <action selector="insertOrUpdateReminder:" destination="KAS-qN-HTc" eventType="touchUpInside" id="A1p-1g-mql"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckW-W6-P4T">
@@ -262,6 +262,9 @@
                                             <constraint firstAttribute="height" constant="50" id="SV6-4e-acs"/>
                                         </constraints>
                                         <state key="normal" title="취소"/>
+                                        <connections>
+                                            <action selector="closeBtn:" destination="KAS-qN-HTc" eventType="touchUpInside" id="627-uE-SxK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

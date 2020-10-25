@@ -12,43 +12,46 @@ import RealmSwift
 class ReminderInsertController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var endDate: UIDatePicker!
+    let seq : Int? = 18
+    let reminder = TB_Reminder()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        removerRealm()
 //        migrateRealm()
-        let seq : Int? = nil
+//        let seq : Int? = nil
 //        let seq : Int? = 13
         initDetailView(seq : seq)
         
         // Do any additional setup after loading the view.
     }
+    
+    // 1-1
     func initDetailView(seq: Int?) {
         
-        let reminder = TB_Reminder()
-        //MARK: change it if avalible better code
-        if(seq != nil){
-            reminder.reminder_seq = 13
-            let selectItem = selectData(rData: reminder)
-            showDetail(rData: selectItem)
-        }
+        //MARK: change it if better code avalible
         // if seq
         // show select item in insert box
         // if not seq
         // show insert box
+        if(seq != nil){
+            reminder.reminder_seq = seq!
+            let selectItem = selectData(rData: reminder)
+            showDetail(rData: selectItem)
+        }
         
     }
     // insert Object
-    func insertData(rData : TB_Reminder) -> TB_Reminder{
-        rData.reminder_seq = rData.autoIncreaseSeq()
+    func insertData(_ rData : TB_Reminder) -> TB_Reminder{
         rData.contents = self.contents.text
         rData.endDate = self.endDate.date//종료 설정일
         rData.insertDate = Date() //입력일
         
         return rData
     }
+    // 1-2
     func selectData(rData: TB_Reminder) -> TB_Reminder {
-        let realm = try! Realm()
 //        rData.reminder_seq = 13
 //        let rDatas = realm.objects(TB_Reminder.self)
 //        print(rDatas)
@@ -57,29 +60,41 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
         return selectData
     }
     
+    // 1-3
     func showDetail(rData: TB_Reminder) {
         self.contents.text = rData.contents
         self.endDate.date = rData.endDate
     }
     
-    @IBAction func insertReminder(_ sender: UIButton) {
-        let realm = try! Realm()
-        
-        let reminder = TB_Reminder()
-        let data = insertData(rData: reminder)
+    @IBAction func insertOrUpdateReminder(_ sender: UIButton) {
         
         do{
             try realm.write{ // realm.write{}는 git에서 commit을 해주는 것과 비슷하다.
-                realm.add(data) // 데이터베이스에 reminderData 모델을 더한다.
-
+                if(seq == nil) {
+                    reminder.reminder_seq = reminder.autoIncreaseSeq()
+                    let data = insertData(reminder)
+                    realm.add(data, update: .modified) // 데이터베이스에 reminderData 모델을 더한다.
+                } else {
+                    if let obj = realm.objects(TB_Reminder.self).filter("reminder_seq=\(seq!)").first {
+                        //MARK: Question _ 
+                        _ = insertData(obj)
+                    }
+                }
             }
         } catch {
             print("Error Add \(error)")
         }
         
         self.dismiss(animated: true, completion: nil)
-        
     }
+    
+    @IBAction func closeBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
     func removerRealm(){
         
