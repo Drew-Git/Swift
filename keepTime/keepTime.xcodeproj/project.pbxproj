@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0C1B028625316CF400ABD399 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B028525316CF400ABD399 /* MainTabbarController.swift */; };
+		0C5F7471255636E3008DB12B /* CustomTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F7470255636E3008DB12B /* CustomTagView.swift */; };
+		0C5F747825567703008DB12B /* CustomDateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F747725567703008DB12B /* CustomDateLabel.swift */; };
+		0CA8E94725453EE600B731CD /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8E94625453EE600B731CD /* ReminderViewCell.swift */; };
+		0CA8E94B254560A100B731CD /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8E94A254560A100B731CD /* Realm.swift */; };
+		0CA8E953254E842F00B731CD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8E952254E842F00B731CD /* Date.swift */; };
+		0CA8E957254EE68500B731CD /* CustomerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8E956254EE68500B731CD /* CustomerProgressView.swift */; };
 		0CCF1213252815C800675317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1212252815C800675317 /* AppDelegate.swift */; };
 		0CCF1215252815C800675317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1214252815C800675317 /* SceneDelegate.swift */; };
 		0CCF1217252815C800675317 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1216252815C800675317 /* ReminderViewController.swift */; };
@@ -24,6 +30,12 @@
 
 /* Begin PBXFileReference section */
 		0C1B028525316CF400ABD399 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		0C5F7470255636E3008DB12B /* CustomTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagView.swift; sourceTree = "<group>"; };
+		0C5F747725567703008DB12B /* CustomDateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateLabel.swift; sourceTree = "<group>"; };
+		0CA8E94625453EE600B731CD /* ReminderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		0CA8E94A254560A100B731CD /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		0CA8E952254E842F00B731CD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		0CA8E956254EE68500B731CD /* CustomerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProgressView.swift; sourceTree = "<group>"; };
 		0CCF120F252815C800675317 /* keepTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keepTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CCF1212252815C800675317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CCF1214252815C800675317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +75,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0CAE981125453DE8006FF254 /* reminder */ = {
+			isa = PBXGroup;
+			children = (
+				0CA8E94625453EE600B731CD /* ReminderViewCell.swift */,
+			);
+			name = reminder;
+			sourceTree = "<group>";
+		};
 		0CCF1206252815C800675317 = {
 			isa = PBXGroup;
 			children = (
+				0CCF121A252815C800675317 /* Main.storyboard */,
 				0CCF1211252815C800675317 /* keepTime */,
 				0CCF1210252815C800675317 /* Products */,
 				0813973EEE513243D5CD5C12 /* Pods */,
@@ -84,10 +105,10 @@
 		0CCF1211252815C800675317 /* keepTime */ = {
 			isa = PBXGroup;
 			children = (
-				0CCF121A252815C800675317 /* Main.storyboard */,
+				0CAE981125453DE8006FF254 /* reminder */,
 				0C1B028525316CF400ABD399 /* MainTabbarController.swift */,
 				0CCF1220252815CA00675317 /* Assets.xcassets */,
-				0CD0656125281BDD00D43DF8 /* realm */,
+				0CD0656125281BDD00D43DF8 /* common */,
 				0CCF1212252815C800675317 /* AppDelegate.swift */,
 				0CCF1214252815C800675317 /* SceneDelegate.swift */,
 				0CCF1216252815C800675317 /* ReminderViewController.swift */,
@@ -100,13 +121,18 @@
 			path = keepTime;
 			sourceTree = "<group>";
 		};
-		0CD0656125281BDD00D43DF8 /* realm */ = {
+		0CD0656125281BDD00D43DF8 /* common */ = {
 			isa = PBXGroup;
 			children = (
 				0CD0656225281C3400D43DF8 /* Player.swift */,
 				0CF0FB57253BD7E2003B056F /* TB_Reminder.swift */,
+				0CA8E94A254560A100B731CD /* Realm.swift */,
+				0CA8E952254E842F00B731CD /* Date.swift */,
+				0CA8E956254EE68500B731CD /* CustomerProgressView.swift */,
+				0C5F7470255636E3008DB12B /* CustomTagView.swift */,
+				0C5F747725567703008DB12B /* CustomDateLabel.swift */,
 			);
-			path = realm;
+			path = common;
 			sourceTree = "<group>";
 		};
 		50F80971C89A2C53D9FDCD0B /* Frameworks */ = {
@@ -232,14 +258,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA8E957254EE68500B731CD /* CustomerProgressView.swift in Sources */,
+				0CA8E94725453EE600B731CD /* ReminderViewCell.swift in Sources */,
 				0CF0FB50253BD60B003B056F /* ReminderInsertController.swift in Sources */,
 				0CCF1219252815C800675317 /* SecondViewController.swift in Sources */,
+				0C5F747825567703008DB12B /* CustomDateLabel.swift in Sources */,
+				0CA8E94B254560A100B731CD /* Realm.swift in Sources */,
 				0CCF1217252815C800675317 /* ReminderViewController.swift in Sources */,
 				0C1B028625316CF400ABD399 /* MainTabbarController.swift in Sources */,
 				0CCF1213252815C800675317 /* AppDelegate.swift in Sources */,
+				0CA8E953254E842F00B731CD /* Date.swift in Sources */,
 				0CCF1215252815C800675317 /* SceneDelegate.swift in Sources */,
 				0CF0FB58253BD7E2003B056F /* TB_Reminder.swift in Sources */,
 				0CD0656325281C3400D43DF8 /* Player.swift in Sources */,
+				0C5F7471255636E3008DB12B /* CustomTagView.swift in Sources */,
 				0CCF121F252815C800675317 /* keepTime.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,68 +7,36 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "545DC12F-9448-4F1E-9FBF-DF4479737D57"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "keepTime/ReminderInsertController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "showDetail(rData:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FEF90FA7-0B1C-4C35-B278-3EEC4F3EFEBF"
+            uuid = "1679C6EC-A645-4EC3-911B-29AB1F7DEE52"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keepTime/ReminderInsertController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "insertOrUpdateReminder(_:)"
-            landmarkType = "7">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "protocolData"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AD172705-7215-4D21-91B5-FE313378BCB9"
+            uuid = "A7C0C1D5-68A2-44DD-B825-7196512D4A6B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keepTime/ReminderInsertController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "insertOrUpdateReminder(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "keepTime/ReminderInsertController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "insertOrUpdateReminder(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56 - 9e22b85afe68b6d"
+                  uuid = "A7C0C1D5-68A2-44DD-B825-7196512D4A6B - 9e22b85afe68c3b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -78,26 +46,42 @@
                   urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "59">
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "392">
                </Location>
                <Location
-                  uuid = "62B045FD-AC18-4036-8265-7DA80C33BA56 - 6b9f03893c079bf3"
+                  uuid = "A7C0C1D5-68A2-44DD-B825-7196512D4A6B - c0f6521598818632"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #2 () -&gt; () in keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
                   moduleName = "keepTime"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "114">
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "55">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A179C99-78C9-4C42-91B9-6151BF88F564"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "keepTime/ReminderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "reloadTableViewData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -8,13 +8,16 @@
 
 import UIKit
 import RealmSwift
-
+protocol protocolData {
+    func reloadTableViewData()
+}
 class ReminderInsertController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var endDate: UIDatePicker!
-    let seq : Int? = 18
+    var seq : Int?
     let reminder = TB_Reminder()
     let realm = try! Realm()
+    var delegate: protocolData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,7 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
         // show select item in insert box
         // if not seq
         // show insert box
+        
         if(seq != nil){
             reminder.reminder_seq = seq!
             let selectItem = selectData(rData: reminder)
@@ -76,7 +80,9 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
                     realm.add(data, update: .modified) // 데이터베이스에 reminderData 모델을 더한다.
                 } else {
                     if let obj = realm.objects(TB_Reminder.self).filter("reminder_seq=\(seq!)").first {
-                        //MARK: Question _ 
+                        
+                        //수정 시 오늘 날짜로 수정
+                        obj.insertDate = Date()
                         _ = insertData(obj)
                     }
                 }
@@ -85,7 +91,9 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
             print("Error Add \(error)")
         }
         
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.delegate?.reloadTableViewData()
+        }
     }
     
     @IBAction func closeBtn(_ sender: Any) {
@@ -95,50 +103,6 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
     
     
     
-    
-    func removerRealm(){
-        
-        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
-
-        let realmURLs = [
-            realmURL,
-            realmURL.appendingPathExtension("lock"),
-            realmURL.appendingPathExtension("note"),
-            realmURL.appendingPathExtension("management")
-        ]
-
-        for URL in realmURLs {
-
-            do {
-
-                try FileManager.default.removeItem(at: URL)
-
-            } catch {
-
-                // handle error
-
-            }
-
-        }
-    }
-    
-    func migrateRealm() {
-            let config = Realm.Configuration(
-                schemaVersion: 1,
-                migrationBlock: { migration, oldSchemaVersion in
-                    if (oldSchemaVersion < 1) {
-                        // The enumerateObjects(ofType:_:) method iterates
-                        // over every Person object stored in the Realm file
-                        migration.enumerateObjects(ofType: TB_Reminder.className()) { oldObject, newObject in
-                            // combine name fields into a single field
-//                            newObject!["insertDate"] = ""
-                        }
-                    }
-                })
-            
-            // 새로운 설정을 기본 저장소에 적용
-            Realm.Configuration.defaultConfiguration = config
-        }
 //    func checkValidate() {
 //        var contentsText = self.contents.text
 //        var contentsDate = self.endDate.date
