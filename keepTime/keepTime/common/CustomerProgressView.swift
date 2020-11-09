@@ -11,30 +11,32 @@ import UIKit
 
 @IBDesignable
 class CustomerProgressView: UIView {
-    @IBInspectable var color: UIColor = .gray
-    @IBInspectable var gradientColor: UIColor = .gray
+    @IBInspectable var color: UIColor = .gray {
+        didSet {setNeedsDisplay()}
+    }
+    @IBInspectable var gradientColor: UIColor = .white {
+        didSet {setNeedsDisplay()}
+    }
     var progress: CGFloat = 0 {
         didSet { setNeedsDisplay()}
     }
     private let progressLayer = CALayer()
-    let backgroundMask = CAShapeLayer()
+    private let gradientLayer = CAGradientLayer()
+    private let backgroundMask = CAShapeLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.addSublayer(progressLayer)
+//        layer.addSublayer(progressLayer)
         setupLayers()
         createAnimation()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        layer.addSublayer(progressLayer)
+//        layer.addSublayer(progressLayer)
         setupLayers()
         createAnimation()
     }
-    
-    // gradientLayer
-    private let gradientLayer = CAGradientLayer()
     
     private func setupLayers() {
         layer.addSublayer(gradientLayer)
@@ -51,8 +53,7 @@ class CustomerProgressView: UIView {
         
         flowAnimation.isRemovedOnCompletion = false
         flowAnimation.repeatCount = Float.infinity
-        flowAnimation.duration = 1
-        
+        flowAnimation.duration = 1.9
         gradientLayer.add(flowAnimation, forKey: "flowAnimation")
     }
     
@@ -65,12 +66,12 @@ class CustomerProgressView: UIView {
         
         let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width * progress, height: rect.height))
         progressLayer.frame = progressRect
+//        progressLayer.backgroundColor = UIColor.black.cgColor
         progressLayer.backgroundColor = UIColor.black.cgColor
         
         gradientLayer.frame = rect
         gradientLayer.colors = [color.cgColor, gradientColor.cgColor, color.cgColor]
         gradientLayer.endPoint = CGPoint(x: progress, y: 0.5)
-        layer.addSublayer(progressLayer)
-        progressLayer.backgroundColor = color.cgColor
+//        layer.addSublayer(progressLayer)
     }
 }

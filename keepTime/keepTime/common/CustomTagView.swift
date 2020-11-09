@@ -12,6 +12,10 @@ import UIKit
 class CustomTagView: UIView {
 
 //    @IBInspectable var color : CGColor = .init(red: 100, green: 0, blue: 0, alpha: 0)
+    @IBInspectable var color: UIColor = .gray {
+        didSet {setNeedsDisplay()}
+    }
+    private let tagLayer = CALayer()
     private let backgroundMask = CAShapeLayer()
     var tagColor: UIColor = .gray {
         didSet { setNeedsDisplay()}
@@ -20,12 +24,18 @@ class CustomTagView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupLayers()
 //        layer.addSublayer(tagLayer)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupLayers()
 //        layer.addSublayer(tagLayer)
+    }
+    
+    private func setupLayers() {
+        layer.addSublayer(tagLayer)
     }
     
     
@@ -33,6 +43,8 @@ class CustomTagView: UIView {
         backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: rect.height / 2).cgPath
         
         layer.mask = backgroundMask
+        
+        tagLayer.backgroundColor = tagColor.cgColor
         
 //        let newView = UIView(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
 //        newView.backgroundColor = color
