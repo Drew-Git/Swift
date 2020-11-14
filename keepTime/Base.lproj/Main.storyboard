@@ -220,8 +220,17 @@
                                                 <rect key="frame" x="80" y="0.0" width="23" height="22"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.64728702910000002" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="paintpalette.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="showPopoverButtonAction:" destination="KAS-qN-HTc" eventType="touchUpInside" id="T28-Qf-ZkK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="jUT-7F-MBY" secondAttribute="bottom" id="3vR-R4-4l8"/>
+                                            <constraint firstAttribute="trailing" secondItem="jUT-7F-MBY" secondAttribute="trailing" id="TfX-NN-Ta4"/>
+                                            <constraint firstItem="jUT-7F-MBY" firstAttribute="leading" secondItem="kuA-xW-Grs" secondAttribute="trailing" constant="18" id="lpy-DW-2FC"/>
+                                            <constraint firstItem="kuA-xW-Grs" firstAttribute="leading" secondItem="Wr1-8H-OMP" secondAttribute="trailing" constant="18" id="uLd-Kb-zHV"/>
+                                        </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-yH-pne">
                                         <rect key="frame" x="20" y="50.5" width="374" height="197.5"/>
@@ -332,6 +341,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorPopBtn" destination="jUT-7F-MBY" id="VzF-ge-3s2"/>
                         <outlet property="contents" destination="XDI-yH-pne" id="ujv-kE-PYL"/>
                         <outlet property="endDate" destination="r8i-5D-ad0" id="rXt-vp-rLc"/>
                     </connections>
@@ -339,6 +349,181 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdn-ni-c4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2263.768115942029" y="-792.1875"/>
+        </scene>
+        <!--Popover Color Picker View Controller-->
+        <scene sceneID="ZeT-rl-Itd">
+            <objects>
+                <viewController storyboardIdentifier="PopoverColorPickerViewController" id="uTb-sY-mMQ" customClass="PopoverColorPickerViewController" customModule="keepTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PopoverColorPickerViewController" id="qTF-xS-jLE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee3-QO-aIY">
+                                <rect key="frame" x="0.0" y="44" width="100" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-XH-LL6" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="15" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-63-kzc">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="xqn-Rz-d5Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="p1k-So-bHA"/>
+                                            <constraint firstAttribute="width" constant="13" id="vAH-mB-DC9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jg-Qh-Nqf" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="38" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzz-Vs-CsW">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="OXA-u6-IYX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="13" id="3Ep-NP-l8h"/>
+                                            <constraint firstAttribute="height" constant="13" id="QIY-Cy-laZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gh-rO-Um7" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="61" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUn-9g-IRZ">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="FND-EQ-KOm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="EtH-WN-4IL"/>
+                                            <constraint firstAttribute="width" constant="13" id="jYW-TM-Zg4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q5-Nb-Hqo" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="84" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KS1-aM-3sZ">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="zW4-UJ-CEC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="4H2-CT-zkx"/>
+                                            <constraint firstAttribute="width" constant="13" id="WAc-We-wTZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtK-l8-Qo9" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="107" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-UW-5l7">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="Sul-wx-aDo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="13" id="4o2-2x-jil"/>
+                                            <constraint firstAttribute="height" constant="13" id="Emc-3f-Vgu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-57-VPu" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="130" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcC-wS-Qj3">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="vFQ-w4-woB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="evx-kE-Ihy"/>
+                                            <constraint firstAttribute="width" constant="13" id="gfp-LL-EIR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9P9-Mf-emK" customClass="CustomTagView" customModule="keepTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="153" width="13" height="13"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-zQ-gLs">
+                                                <rect key="frame" x="-9" y="-9" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <connections>
+                                                    <action selector="getColorTagBtnAction:" destination="uTb-sY-mMQ" eventType="touchUpInside" id="G1S-QZ-Prm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="b1C-g2-QjV"/>
+                                            <constraint firstAttribute="width" constant="13" id="yRT-qA-wnk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="9P9-Mf-emK" firstAttribute="top" secondItem="r6y-57-VPu" secondAttribute="bottom" constant="10" id="2Jg-KV-kBh"/>
+                                    <constraint firstItem="r6y-57-VPu" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="5Xc-CJ-MfG"/>
+                                    <constraint firstItem="5Gh-rO-Um7" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="5yc-Gv-A3a"/>
+                                    <constraint firstItem="9P9-Mf-emK" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="D5B-KB-z7k"/>
+                                    <constraint firstItem="0Jg-Qh-Nqf" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="J5g-fe-68Z"/>
+                                    <constraint firstItem="PtK-l8-Qo9" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="Qr9-wC-OVr"/>
+                                    <constraint firstItem="0Jg-Qh-Nqf" firstAttribute="top" secondItem="uP1-XH-LL6" secondAttribute="bottom" constant="10" id="Rro-G3-Gky"/>
+                                    <constraint firstItem="7Q5-Nb-Hqo" firstAttribute="top" secondItem="5Gh-rO-Um7" secondAttribute="bottom" constant="10" id="SAV-Fb-gvc"/>
+                                    <constraint firstAttribute="height" constant="180" id="SDe-5g-Rre"/>
+                                    <constraint firstItem="PtK-l8-Qo9" firstAttribute="top" secondItem="7Q5-Nb-Hqo" secondAttribute="bottom" constant="10" id="TIT-BB-mD2"/>
+                                    <constraint firstItem="r6y-57-VPu" firstAttribute="top" secondItem="PtK-l8-Qo9" secondAttribute="bottom" constant="10" id="V8F-se-fgo"/>
+                                    <constraint firstItem="7Q5-Nb-Hqo" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="emx-nw-wyA"/>
+                                    <constraint firstAttribute="leading" secondItem="uP1-XH-LL6" secondAttribute="trailing" constant="-21" id="n2I-tH-nNS"/>
+                                    <constraint firstItem="uP1-XH-LL6" firstAttribute="top" secondItem="ee3-QO-aIY" secondAttribute="top" constant="15" id="oFd-an-rjd"/>
+                                    <constraint firstItem="uP1-XH-LL6" firstAttribute="leading" secondItem="ee3-QO-aIY" secondAttribute="leading" constant="8" id="qZc-Mf-To4"/>
+                                    <constraint firstAttribute="width" constant="100" id="sKr-Nu-rp0"/>
+                                    <constraint firstItem="5Gh-rO-Um7" firstAttribute="top" secondItem="0Jg-Qh-Nqf" secondAttribute="bottom" constant="10" id="uLj-Fa-pnQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hhw-ae-5zx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ee3-QO-aIY" firstAttribute="top" secondItem="Hhw-ae-5zx" secondAttribute="top" id="0Im-9x-Kvq"/>
+                            <constraint firstItem="ee3-QO-aIY" firstAttribute="leading" secondItem="Hhw-ae-5zx" secondAttribute="leading" id="HUV-a0-RHh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorPicker" destination="ee3-QO-aIY" id="3AV-Xy-AiJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPd-ko-Tpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073.913043478261" y="-792.1875"/>
         </scene>
         <!--Main Tabbar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -413,14 +598,35 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

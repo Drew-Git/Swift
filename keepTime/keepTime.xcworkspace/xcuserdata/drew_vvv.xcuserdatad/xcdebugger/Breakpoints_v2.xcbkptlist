@@ -30,42 +30,10 @@
             filePath = "keepTime/ReminderInsertController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "insertOrUpdateReminder(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A7C0C1D5-68A2-44DD-B825-7196512D4A6B - 9e22b85afe68c3b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
-                  moduleName = "keepTime"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "392">
-               </Location>
-               <Location
-                  uuid = "A7C0C1D5-68A2-44DD-B825-7196512D4A6B - c0f6521598818632"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in keepTime.ReminderInsertController.insertOrUpdateReminder(__C.UIButton) -&gt; ()"
-                  moduleName = "keepTime"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/drew_vvv/Documents/Swift%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE/PortFolio/keepTime/keepTime/ReminderInsertController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "55">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,6 +49,22 @@
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "reloadTableViewData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94DAB9E5-3FDB-46DB-878F-F8DAB521983A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "keepTime/viewController/PopoverColorPickerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getColorTagBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,13 +11,15 @@ import RealmSwift
 protocol protocolData {
     func reloadTableViewData()
 }
-class ReminderInsertController: UIViewController, UITextViewDelegate {
+class ReminderInsertController: UIViewController, UITextViewDelegate, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var endDate: UIDatePicker!
+    @IBOutlet weak var colorPopBtn: UIButton!
     var seq : Int?
     let reminder = TB_Reminder()
     let realm = try! Realm()
     var delegate: protocolData?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,53 @@ class ReminderInsertController: UIViewController, UITextViewDelegate {
         initDetailView(seq : seq)
         
         // Do any additional setup after loading the view.
+    }
+    @IBAction func showPopoverButtonAction(_ sender: Any) {
+        NSLog("ReminderInsertController - showPopoverButtonAction")
+        // 1
+        //get the button frame
+        let button = sender as! UIButton
+        let buttonFrame = button.frame
+        
+        let senderPoint = button.convert(CGPoint(x: -(buttonFrame.origin.x+20), y: -buttonFrame.origin.y), to: self.view)
+        print(#function,senderPoint)
+        let rect = CGRect(origin: senderPoint,
+                          size: CGSize(width: 1, height: 1))
+        
+        //2
+        // configure the presentation controller
+//        self.storyboard?.instantiateViewController(withIdentifier: <#T##String#>)
+        let PopoverColorPickerViewController = self.storyboard?.instantiateViewController(withIdentifier: "PopoverColorPickerViewController") as? PopoverColorPickerViewController
+        PopoverColorPickerViewController?.modalPresentationStyle = .popover
+        PopoverColorPickerViewController?.preferredContentSize = CGSize(width: 100, height: 180)
+        
+        //3
+        if let popoverPresentationController = PopoverColorPickerViewController?.popoverPresentationController {
+            popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceRect = rect
+//            popoverPresentationController.popoverLayoutMargins = UIEdgeInsets(top: 100, left: 100, bottom: 0, right: 0)
+            popoverPresentationController.delegate = self
+            if let popoverController = PopoverColorPickerViewController {
+                present(popoverController, animated: true, completion: nil)
+            }
+            
+            
+        }
+    }
+    
+    // UIPopoverPresentationControllerDelegate inherits from UIAdaptivePresentationControllerDelegate, we will use this method to define the presentation style for popover presentation controller
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    //UIPopoverPresentationControllerDelegate
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        
+    }
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        return true
     }
     
     // 1-1
