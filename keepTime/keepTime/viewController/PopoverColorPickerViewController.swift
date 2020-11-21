@@ -25,7 +25,9 @@ class PopoverColorPickerViewController: UIViewController {
     @IBAction func getColorTagBtnAction(_ sender: UIButton) {
         print(#file, #function, "sender.tag", sender.tag)
         print(sender.tag)
+        print(sender.backgroundColor)
         print(sender.backgroundColor?.cgColor)
+        print(sender.backgroundColor?.ciColor)
     }
     /*
     // MARK: - Navigation

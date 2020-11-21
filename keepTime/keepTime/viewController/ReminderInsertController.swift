@@ -15,6 +15,7 @@ class ReminderInsertController: UIViewController, UITextViewDelegate, UIPopoverP
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var endDate: UIDatePicker!
     @IBOutlet weak var colorPopBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
     var seq : Int?
     let reminder = TB_Reminder()
     let realm = try! Realm()
@@ -92,6 +93,7 @@ class ReminderInsertController: UIViewController, UITextViewDelegate, UIPopoverP
             reminder.reminder_seq = seq!
             let selectItem = selectData(rData: reminder)
             showDetail(rData: selectItem)
+            saveBtn.setTitle("수정", for: .normal)
         }
         
     }
